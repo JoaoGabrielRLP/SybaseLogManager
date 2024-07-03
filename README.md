@@ -65,7 +65,7 @@
 <p>Se você encontrar algum problema, por favor, abra uma issue no repositório. Forneça o máximo de detalhes possível para que possamos resolver o problema rapidamente.</p>
 
 <h1>Contato</h1>
-<p>Para mais informações ou dúvidas, entre em contato pelo e-mail: <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a>.</p>
+<p>Para mais informações ou dúvidas, entre em contato pelo e-mail: <a href="mailto:joaogbriellopespereira@hotmail.com">joaogbriellopespereira@hotmail.com</a>.</p>
 
 <h1>Agradecimentos</h1>
 <p>Agradecemos a todos os contribuidores e usuários que ajudam a melhorar este projeto!</p>
