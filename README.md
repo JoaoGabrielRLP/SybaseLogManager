@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>README - Sybase Log Manager</title> </head> <body> <h1>Sybase Log Manager</h1>
+<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head> <body> <h1>Sybase Log Manager</h1>
 <h1>Descrição</h1>
 <p>O <strong>Sybase Log Manager</strong> é uma ferramenta auxiliar para a aplicação de logs do Sybase 17, projetada para ser utilizada com o sistema Domínio ou o SQL Anywhere versão 17. Esta aplicação facilita o gerenciamento e a visualização de logs, melhorando a eficiência e a eficácia na administração do banco de dados.</p>
 
