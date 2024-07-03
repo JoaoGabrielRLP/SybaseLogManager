@@ -64,9 +64,6 @@
 <h1>Relatório de Problemas</h1>
 <p>Se você encontrar algum problema, por favor, abra uma issue no repositório. Forneça o máximo de detalhes possível para que possamos resolver o problema rapidamente.</p>
 
-<h1>Licença</h1>
-<p>Este projeto está licenciado sob a licença MIT - veja o arquivo <a href="LICENSE">LICENSE</a> para mais detalhes.</p>
-
 <h1>Contato</h1>
 <p>Para mais informações ou dúvidas, entre em contato pelo e-mail: <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a>.</p>
 
