@@ -181,6 +181,12 @@ class LogApplication(tk.Tk):
             messagebox.showerror("Erro", "Selecione o arquivo correto.")
             return
         
+        # Verifica se o arquivo contabil.log existe na mesma pasta do arquivo .db
+        log_file_path = os.path.join(os.path.dirname(db_file), "contabil.log")
+        if os.path.exists(log_file_path):
+            messagebox.showerror("Erro", "Existe um arquivo contabil.log na pasta. Por favor, exclua-o antes de prosseguir.")
+            return
+        
         try:
             # Construir o comando de forma robusta
             command = ["dbeng17", db_file, "-f", "-o", "logininicializacao.txt"]
@@ -209,6 +215,12 @@ class LogApplication(tk.Tk):
         # Verifica se o arquivo tem a extensão correta
         if not db_file.endswith(".db"):
             messagebox.showerror("Erro", "Selecione o arquivo correto.")
+            return
+        
+        # Verifica se o arquivo contabil.log existe na mesma pasta do arquivo .db
+        log_file_path = os.path.join(os.path.dirname(db_file), "contabil.log")
+        if os.path.exists(log_file_path):
+            messagebox.showerror("Erro", "Existe um arquivo contabil.log na pasta. Por favor, exclua-o antes de prosseguir.")
             return
         
         try:
