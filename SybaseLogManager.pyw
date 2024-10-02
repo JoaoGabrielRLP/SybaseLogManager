@@ -110,7 +110,7 @@ class LogApplication(tk.Tk):
     
     def create_command2_tab(self):
         # Mensagem de destaque
-        self.command2_warning_label = tk.Label(self.command2_frame, text="IMPORTANTE: Esse comando deve ser feito apenas em uma cópia do banco de dados e caso consiga acessar o sistema, o banco deve passar para reconstrução.", fg="red")
+        self.command2_warning_label = tk.Label(self.command2_frame, text="IMPORTANTE: Esse comando deve ser feito apenas em uma cópia do banco de dados no caso dos outros comandos não surtitem efeito.\n\n Após a aplicação, abrir o gerenciador de tarefas e avaliar se o processo SQL ANYWHERE PERSONAL SERVER FOI iniciado: \n-Caso sim, o banco poderá ser reconstruído e deverá passar para reconstrução. \n-Caso não, não é possível reconstruir e o cliente deverá utilizar o backup mais recente como banco de produção", fg="red")
         self.command2_warning_label.pack(pady=10)
 
         # Seleção do arquivo de banco de dados
@@ -181,6 +181,12 @@ class LogApplication(tk.Tk):
             messagebox.showerror("Erro", "Selecione o arquivo correto.")
             return
         
+        # Verifica se o arquivo contabil.log existe na mesma pasta do arquivo .db
+        log_file_path = os.path.join(os.path.dirname(db_file), "contabil.log")
+        if os.path.exists(log_file_path):
+            messagebox.showerror("Erro", "Existe um arquivo contabil.log na pasta. Por favor, exclua-o antes de prosseguir.")
+            return
+        
         try:
             # Construir o comando de forma robusta
             command = ["dbeng17", db_file, "-f", "-o", "logininicializacao.txt"]
@@ -209,6 +215,12 @@ class LogApplication(tk.Tk):
         # Verifica se o arquivo tem a extensão correta
         if not db_file.endswith(".db"):
             messagebox.showerror("Erro", "Selecione o arquivo correto.")
+            return
+        
+        # Verifica se o arquivo contabil.log existe na mesma pasta do arquivo .db
+        log_file_path = os.path.join(os.path.dirname(db_file), "contabil.log")
+        if os.path.exists(log_file_path):
+            messagebox.showerror("Erro", "Existe um arquivo contabil.log na pasta. Por favor, exclua-o antes de prosseguir.")
             return
         
         try:
